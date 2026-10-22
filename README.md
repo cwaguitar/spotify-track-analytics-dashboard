@@ -9,6 +9,10 @@
 ![Demo del Dashboard](./spot.gif)
 
 ---
+### 1. Ingesta y Limpieza de Datos (Python & Pandas)
+
+* **Dataset Source:** Archivo CSV masivo (~72.4k registros de Spotify).
+* **Procesamiento:** Se utilizó **Python** y **Pandas** para la normalización de textos, manejo de nulos y optimización de estructuras. Puedes revisar el código completo en [notebook de limpieza](./exploracion_spotify.py).
 
 ## 🎯 Objetivos de Negocio & Métricas Clave
 
