@@ -31,7 +31,7 @@ Se construyó un flujo de análisis de datos de producto que procesa el catálog
 
 ## 📊 Demostración Interactiva
 
-![Spotify Dashboard](./images/spotify_demo.png)
+![Spotify Dashboard]([./images/spotify_demo.png](https://github.com/cwaguitar/spotify-track-analytics-dashboard/blob/main/spot.gif))
 
 ---
 
