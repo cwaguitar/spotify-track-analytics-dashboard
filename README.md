@@ -9,7 +9,7 @@ El objetivo de este proyecto es analizar el catálogo de tracks de Spotify para 
 
 ## 🎯 Problema a Resolver
 1. **Falta de visibilidad sobre factores de éxito:** Dificultad para determinar qué atributos sonoros caracterizan a los temas con mayor rendimiento en la plataforma.
-2. **Evaluación de alcance cruzado:** Necesidad de entender la relación entre la presencia de un track en playlists y listas de éxitos (*charts*) frente a su volumen total de reproducciones.
+2. **Evaluación de alcance cruzado:** Necesidad de entender la relación entre la presencia de un track en playlists y listas de éxitos (charts) frente a su volumen total de reproducciones.
 
 ---
 
@@ -24,7 +24,7 @@ Se construyó un flujo de análisis de datos de producto que procesa el catálog
 
 ### 2. Modelado y Métricas en Power BI
 - Definición de KPIs para evaluar la distribución de canciones por nivel de popularidad.
-- Segmentación por atributos de audio (*Danceability*, *Energy*, *Valence*, *BPM*).
+- Segmentación por atributos de audio (Danceability, Energy, Valence, BPM).
 - Análisis comparativo de rendimiento entre canciones en solitario vs. colaboraciones.
 
 ---
@@ -45,5 +45,9 @@ Se construyó un flujo de análisis de datos de producto que procesa el catálog
 ## 🚀 Cómo Ejecutar este Proyecto
 
 1. Clonar el repositorio:
-   ```bash
-   git clone [https://github.com/cwaguitar/spotify-track-analytics-dashboard.git](https://github.com/cwaguitar/spotify-track-analytics-dashboard.git)
+   git clone https://github.com/cwaguitar/spotify-track-analytics-dashboard.git
+
+2. Ejecutar el script de limpieza en Python:
+   python scripts/clean_data.py
+
+3. Abrir el archivo .pbix dentro de la carpeta /dashboard con Power BI Desktop.
