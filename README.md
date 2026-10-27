@@ -1,68 +1,49 @@
-# 🎵 Spotify Track Analytics Dashboard
+# 🎵 Spotify Track Analytics: Análisis de Rendimiento y Atributos de Audio para Curaduría de Contenido
 
-> Un dashboard interactivo de Business Intelligence desarrollado en Power BI para analizar un dataset de más de **72,400 canciones de Spotify**, enfocado en la exploración de popularidad por género y el comportamiento de los artistas principales.
+## 💼 Contexto del Negocio
+En las plataformas de streaming de música, la retención de usuarios depende de la capacidad de ofrecer contenido que resuene con las tendencias de escucha. Sin embargo, los equipos de curaduría de contenido y marketing suelen tomar decisiones basadas en intuición más que en datos sobre qué canciones o artistas priorizar en las playlists oficiales.
 
----
-
-## 📊 Vista Previa del Dashboard
-
-![Demo del Dashboard](./spot.gif)
-
----
-### 1. Ingesta y Limpieza de Datos (Python & Pandas)
-
-* **Dataset Source:** Archivo CSV masivo (~72.4k registros de Spotify).
-* **Procesamiento:** Se utilizó **Python** y **Pandas** para la normalización de textos, manejo de nulos y optimización de estructuras. Puedes revisar el código completo en [notebook de limpieza](./exploracion_spotify.py).
-
-## 🎯 Objetivos de Negocio & Métricas Clave
-
-El reporte responde a preguntas clave de análisis exploratorio (EDA):
-
-* **¿Cuál es el volumen real de canciones únicas** en el ecosistema analizado?
-
-* **¿Cómo se distribuye la puntuación de popularidad (0-100)** a nivel global y filtrada por género?
-
-* **¿Qué artistas lideran el Top 10** en términos de presencia e impacto en las reproducciones?
-
-### KPIs Principales (Calculados mediante DAX):
-
-1. **Distinct Track Count:** Recuento único de canciones para evitar duplicados en el modelo.
-
-2. **Average Popularity Score:** Puntuación promedio normalizada en la escala oficial de Spotify (0-100).
+El objetivo de este proyecto es analizar el catálogo de tracks de Spotify para identificar qué patrones de audio (tempo, energía, bailable, etc.) e indicadores de plataforma impactan directamente en la popularidad y alcance de una canción.
 
 ---
 
-## 🛠️ Stack Tecnológico & Proceso Técnico
-
-* **Herramienta:** Power BI Desktop.
-
-### 1. Ingesta y Limpieza de Datos (Python & Pandas)
-* **Dataset Source:** Archivo CSV masivo (~72.4k registros de Spotify).
-
-* **Procesamiento:** Se utilizó **Python** y la librería **Pandas** para:
-
-  * Inspección inicial de nulos, tipos de datos y duplicados.
-  * Normalización de columnas de texto (géneros y nombres de artistas).
-  * Optimización de estructuras de datos antes de importarlas al modelo de BI.
-
-### 2. Modelado y Limpieza:
-
-  * Depuración de referencias cruzadas y manejo de cardinalidad para garantizar la integridad de las métricas.
-  * Configuración avanzada de interactividad (Filtros cruzados y segmentación dinámica por Slicer de género).
-
-* **Diseño UI/UX :**
-
-  * Estructura limpia basada en tarjetas KPI macro, alineación simétrica y jerarquía visual clara.
-  * Nomenclaturas explícitas en etiquetas y visuales para una lectura inmediata sin fricción.
+## 🎯 Problema a Resolver
+1. **Falta de visibilidad sobre factores de éxito:** Dificultad para determinar qué atributos sonoros caracterizan a los temas con mayor rendimiento en la plataforma.
+2. **Evaluación de alcance cruzado:** Necesidad de entender la relación entre la presencia de un track en playlists y listas de éxitos (*charts*) frente a su volumen total de reproducciones.
 
 ---
 
-## 🚀 Cómo explorar este proyecto
-1. Descarga el archivo [Spotify_Dashboard.pbix](./Spotify.pbix) desde este repositorio.
+## 🛠️ Solución Implementada
 
-2. Ábrelo en tu equipo utilizando **Power BI Desktop**.
+Se construyó un flujo de análisis de datos de producto que procesa el catálogo de canciones, evalúa sus variables técnicas y expone los hallazgos en un dashboard interactivo en Power BI.
 
-3. Interactúa con el desplegable de géneros musicales para observar el filtrado en tiempo real sobre el Top 10 de artistas y las tarjetas de métricas.
+### 1. Procesamiento y Limpieza de Datos (Python / Pandas)
+- Normalización de nombres de tracks y artistas para eliminar duplicados.
+- Tratamiento de datos faltantes en métricas de audio y fechas de lanzamiento.
+- Formateo de variables de interacción (presencia en playlists vs. reproductores de streaming).
+
+### 2. Modelado y Métricas en Power BI
+- Definición de KPIs para evaluar la distribución de canciones por nivel de popularidad.
+- Segmentación por atributos de audio (*Danceability*, *Energy*, *Valence*, *BPM*).
+- Análisis comparativo de rendimiento entre canciones en solitario vs. colaboraciones.
 
 ---
-*Desarrollado como parte de mi portafolio profesional en Análisis de Datos & Business Intelligence.*
+
+## 📊 Demostración Interactiva
+
+![Spotify Dashboard](./images/spotify_demo.png)
+
+---
+
+## 🛠️ Stack Tecnológico
+- **Python (Pandas):** Ingesta, limpieza y estructuración de los datos de Spotify.
+- **Power BI Desktop:** Modelado de datos, creación de medidas DAX para agregaciones de popularidad y diseño de la interfaz interactiva.
+- **Git & GitHub:** Control de versiones y documentación del caso de uso.
+
+---
+
+## 🚀 Cómo Ejecutar este Proyecto
+
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/cwaguitar/spotify-track-analytics-dashboard.git](https://github.com/cwaguitar/spotify-track-analytics-dashboard.git)
